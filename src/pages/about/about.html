@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Best Seller
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let item of allProducts" (click)="gotoProductDetails(item)">
+      <ion-card-header>{{item.name}}</ion-card-header>
+      <img [src]='item.image'>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
